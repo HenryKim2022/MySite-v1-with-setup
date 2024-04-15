@@ -1,0 +1,114 @@
+/*  */
+/* CSS: FOR MODIFY HTML SCROLLBAR */
+/* Change For Webkit browsers (Chrome, Safari) Scrollbar */
+/*  */
+html {
+    /* Set a fixed height and width for the container */
+    height: 100%;
+    width: 100%;
+    /* Add overflow and hide the default scrollbar */
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+/*  */
+/*  */
+/*  */
+
+
+
+/*  */
+/*  */
+/* .mb-4{
+    margin-bottom: 1.5rem !important;
+} */
+input.w-18-vw{
+    width: 60%;
+}
+.input-field {
+    padding-left: 4px;
+}
+.w-colon::after{
+    content: "::   ";
+    display: inline-block;
+    margin-right: 4px; /* Adjust as needed */
+}
+
+.custom-justify-between {
+    justify-content: space-between;
+}
+
+.custom-mb-0-52{
+    margin-bottom: 0.52rem;
+}
+
+.custom-mt-6{
+    margin-top: 1.5rem;
+}
+
+.custom-h-full{
+    height: 100%;
+}
+
+
+
+/*  */
+/*  */
+/* CSS: TAB */
+.tab-container {
+    /* width: 100%; */
+    /* max-width: 600px; */
+    min-width: 28vw;
+    min-height: 52vh;
+    margin: 0 auto;
+}
+
+.tab {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    /* padding: 20px; */
+    /* border: 1px solid #ccc; */
+    border-top: none;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
