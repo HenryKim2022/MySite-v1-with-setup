@@ -48,12 +48,6 @@
                     <div class="grid grid-cols-1 md:grid-cols-1 gap-6 lg:gap-8">
                         <a class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex items-center justify-center motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                             <div>
-                                {{-- <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
-                                </div> --}}
-                                {{-- <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2> --}}
 
                                 <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed flex custom-justify-between items-center">
                                     <div class="tab-container">
@@ -67,20 +61,17 @@
                                             @csrf
                                             <!-- First Tab: General Configuration -->
                                             <div id="general" class="tabcontent flex custom-justify-between items-center" style="display: block;">
-                                                <!-- First Tab: General Configuration -->
                                                 <div>
                                                     <div class="custom-mb-0-52 flex custom-justify-between items-center">
                                                         <label for="app_name" class="text-gray-500 dark:text-gray-400 text-sm w-colon leading-relaxed">App Name</label>
                                                         <input type="text" id="app_name" name="app_name" required class="w-18-vw input-field text-small mt-1 px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-white-800/50 text-gray-800 dark:text-black rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500" value="{{ env('APP_NAME') ? env('APP_NAME') : 'Laravel' }}">
                                                     </div>                                        
                                                     <div class="custom-mb-0-52 flex custom-justify-between items-center">
-                                                        <label for="app_env" class="text-gray-500 dark:text-gray-400 text-sm w-colon leading-relaxed">App Environment</label>
-                                                        {{-- <input type="text" id="app_env" name="app_env" required class="w-18-vw input-field text-small mt-1 px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-white-800/50 text-gray-800 dark:text-black rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500" value="{{ env('APP_ENV') ? env('APP_ENV') : 'local' }}"> --}}
+                                                        <label for="app_env" class="text-gray-500 dark:text-gray-400 text-sm w-colon leading-relaxed">App Environment</label>                                                     
                                                         <select name="app_env" id="app_env" required class="w-18-vw input-field text-small mt-1 px-4 py-2 border border-gray-300 dark:border-gray-700 bg-white dark:bg-white-800/50 text-gray-800 dark:text-black rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500" >
                                                             <option value="local" {{ env('APP_ENV') == 'local' ? 'selected' : '' }}>Local</option>
                                                             <option value="live" {{ env('APP_ENV') == 'live' ? 'selected' : '' }}>Live</option>
                                                         </select>
-
                                                     </div>                                        
                                                     <div class="custom-mb-0-52 flex custom-justify-between items-center">
                                                         <label for="app_debug" class="text-gray-500 dark:text-gray-400 text-sm w-colon leading-relaxed">App Debug</label>
@@ -96,13 +87,11 @@
                                                     <button type="button" class="cpx-1 cpy-1 bg-gray-300 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-400 dark:hover:bg-gray-600 hover:text-white dark:hover:text-white focus:outline-none rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500" onclick="openPreviousTab(event)">Previous</button>
                                                     <button type="button" class="cpx-1 cpy-1 bg-blue-500 dark:bg-blue-700 text-white dark:text-gray-400 hover:bg-blue-600 dark:hover:bg-blue-800 hover:text-black dark:hover:text-white focus:outline-none rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500" onclick="openNextTab(event)">Next</button>
                                                 </div>
-
-                                                <!-- Add other fields related to general configuration -->
+                                              
                                             </div>
 
                                             <!-- Second Tab: Database Configuration -->
                                             <div id="database" class="tabcontent">
-                                                <!-- Second Tab: Database Configuration -->
                                                 <div>
                                                     <div class="custom-mb-0-52 flex custom-justify-between items-center">
                                                         <label for="db_connection" class="text-gray-500 dark:text-gray-400 text-sm w-colon leading-relaxed">Db Connection</label>
@@ -133,13 +122,11 @@
                                                 <div class="tab-footer mt-4 flex custom-justify-between items-center">
                                                     <button type="button" class="cpx-1 cpy-1 bg-gray-300 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-400 dark:hover:bg-gray-600 hover:text-white dark:hover:text-white focus:outline-none rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500" onclick="openPreviousTab(event)">Previous</button>
                                                     <button type="button" class="cpx-1 cpy-1 bg-blue-500 dark:bg-blue-700 text-white dark:text-gray-400 hover:bg-blue-600 dark:hover:bg-blue-800 hover:text-white dark:hover:text-white focus:outline-none rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500" onclick="openNextTab(event)">Next</button>
-                                                </div>
-                                                <!-- Add other fields related to database configuration -->
+                                                </div>                                
                                             </div>
 
                                             <!-- Second Tab: Database Configuration -->
                                             <div id="email" class="tabcontent">
-                                                <!-- Third Tab: Mail Configuration -->
                                                 <div>
                                                     <div class="custom-mb-0-52 flex custom-justify-between items-center">
                                                         <label for="mail_protocol" class="text-small text-gray-500 dark:text-gray-400 text-sm w-colon leading-relaxed">Mail Protocol</label>
@@ -182,11 +169,9 @@
                                                 <div class="tab-footer mt-4 flex custom-justify-between items-center">
                                                     <button type="button" class="cpx-1 cpy-1 bg-gray-300 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-400 dark:hover:bg-gray-600 hover:text-white dark:hover:text-white focus:outline-none rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500" onclick="openPreviousTab(event)">Previous</button>
                                                     <button type="submit" class="cpx-1 cpy-1 bg-blue-500 dark:bg-blue-700 text-white dark:text-gray-400 hover:bg-blue-600 dark:bg-dots-lighter dark:hover:bg-blue-800 hover:text-white dark:hover:text-white focus:outline-none rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">Finish</button>
-                                                </div>
-                                                <!-- Add other fields related to database configuration -->                                                
-                                            </div>                                                                              
-                                            
-                                            
+                                                </div>                                             
+                                            </div>                                                                           
+                                    
                                         </form>
                                     </div>
 
@@ -228,38 +213,12 @@
                                                 previousTabButton.classList.add("active");
                                             }
                                         }
-                                    </script>
-
-
-                                    {{-- <script>
-                                        function openTab(evt, tabName) {
-                                            var i, tabcontent, tablinks;
-                                            tabcontent = document.getElementsByClassName("tabcontent");
-                                            for (i = 0; i < tabcontent.length; i++) {
-                                            tabcontent[i].style.display = "none";
-                                            }
-                                            tablinks = document.getElementsByClassName("tablinks");
-                                            for (i = 0; i < tablinks.length; i++) {
-                                            tablinks[i].className = tablinks[i].className.replace(" active", "");
-                                            }
-                                            document.getElementById(tabName).style.display = "block";
-                                            evt.currentTarget.className += " active";
-                                        }
-                                    </script> --}}
-
-                                                                        
-                                    {{-- <button type="submit" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:bg-red-600">Save Configuration</button> --}}
+                                    </script>                                 
                                        
                                 </p>
                             </div>
-
-                            {{-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg> --}}
                         </a>
-
-                        
-
+                    
                         
                     </div>
                 </div>
