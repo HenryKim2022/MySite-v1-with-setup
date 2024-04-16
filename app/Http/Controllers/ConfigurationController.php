@@ -10,12 +10,12 @@ class ConfigurationController extends Controller
 {
     public function showConfigurationPage()
     {
-        // if (env('APP_INSTALL', false)) {
-        //     return Redirect::to('/');
-        // }else{
-        return view('configure');
-        // }
-        
+        return view('configure');        
+    }
+
+    public function showDocPage()
+    {
+        return view('doc');        
     }
 
     public function saveConfiguration(Request $request)

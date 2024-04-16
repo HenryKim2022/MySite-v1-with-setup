@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 // // // // CONFIG
 use App\Http\Controllers\ConfigurationController;
+Route::get('/doc', [ConfigurationController::class, 'showDocPage'])->name('doc');
 Route::get('/configure', [ConfigurationController::class, 'showConfigurationPage'])->name('configure');
 Route::post('/configure', [ConfigurationController::class, 'saveConfiguration'])->name('configure.save');
 if (env('APP_INSTALL', false)) {    // Not False
